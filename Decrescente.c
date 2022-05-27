@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//Programa que pega a entrada de três números inteiros e organiza de forma decrescente. Obs: Não era permitido usar vetor ou estrutura de repetição.
+
 int main(){
 
     int x,y,z;
