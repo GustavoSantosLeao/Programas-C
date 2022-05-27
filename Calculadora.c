@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//Programa que aceita entrada de dois números inteiros. Após isso faz a soma, subtração, multiplicação e divisão entre os dois números digitados.
+
 int main(){
 
     int x, y;
