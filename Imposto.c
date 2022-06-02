@@ -1,6 +1,8 @@
 #include <stdio.h>
 //Equipe: Gustavo dos Santos, Bernardo Ruas, Samuel de Abreu, Luigi Eliabe
 
+//Programa feito para calcular imposto de renda do Brasil. Feito para apresentação de um trabalho.
+
 int main (){
 	
 	float salario, imposto, f2, f3, f4, f5;
