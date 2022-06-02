@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//Programa feito com o intuito de calcular o valor da conta de luz. Nele ser√° recebido o consumo de kwh, a bandeira e o tipo de consumidor.
+
 int main(){
 
     int bandeira, tc; //entrada tc=tipo de consumidor
@@ -30,7 +32,7 @@ int main(){
             }
         }
     }else{								//se for consumidor de baixa renda
-        if(kwh <= 30){ 					//atÈ 30 kwh
+        if(kwh <= 30){ 					//at√© 30 kwh
             if(bandeira==1){
                 consumo= kwh* 0.19712;
                 iluminacao=kwh*0.34559;
@@ -48,7 +50,7 @@ int main(){
                     }
                 }
             }
-        }else{							//atÈ 100 kwh
+        }else{							//at√© 100 kwh
 	    	if(kwh <= 100){
 	    		if(bandeira==1){
 	    			consumo= 30*0.19712+((kwh-30)*0.33793);
@@ -67,7 +69,7 @@ int main(){
 						}
 					}
 				}
-	   		}else{							//atÈ 220 kwh
+	   		}else{							//at√© 220 kwh
 				if(kwh <= 220){
 					if(bandeira==1){
 						consumo= 30*0.19712+70*0.33793+((kwh-100)*0.50689);
