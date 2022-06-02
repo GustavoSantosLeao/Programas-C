@@ -2,28 +2,30 @@
 #include<locale.h>
 #include<stdlib.h>
 
+//Jogo da Velha desenvolvido em 2019 para treinar C. Feito com if e estrutura de repetiÃ§Ã£o, nÃ£o existe uma condiÃ§Ã£o para vocÃª vencer.
+
 int main(){
 setlocale(LC_ALL,"portuguese");
 char matriz[3][3];
 int y=0, z=0, replay; // variavel para prar/continuar algo
 int i, j; // contadores
 int l, c; // Variaveis para linha e coluna
-int cq;  //outras váriaveis opcionais
+int cq;  //outras vÃ¡riaveis opcionais
 do{
 	system("cls");
 	y=0;
 	for(i=0;i<3;i++){
 		for(j=0;j<3;j++){
-			matriz[i][j]=' ';    //valores dentro dos espaços no tabuleiro
+			matriz[i][j]=' ';    //valores dentro dos espaÃ§os no tabuleiro
 		}
 	}
 	
 	do{
-	printf("\nSua vez:\n"); 							//Espaçamento para não misturar o tabuleiro
+	printf("\nSua vez:\n"); 							//EspaÃ§amento para nÃ£o misturar o tabuleiro
 	for(i=0;i<3;i++){
 		printf("\n");
 		for(j=0;j<3;j++){
-			printf(" %c |",matriz[i][j]);   //construção do tabuleiro com os espaços criados antes
+			printf(" %c |",matriz[i][j]);   //construÃ§Ã£o do tabuleiro com os espaÃ§os criados antes
 		}
 	}
 	
@@ -51,7 +53,7 @@ do{
 		}
 	}
 	
-	//Primeiro, o computador irá analisar se ele pode ganhar
+	//Primeiro, o computador irÃ¡ analisar se ele pode ganhar
 	
 	if((matriz[0][0]=='o') && (matriz[0][1]=='o') && (matriz[0][2]==' ')){
 		matriz[0][2]='o';
@@ -178,9 +180,9 @@ do{
 							y=1;
 						}else{
 						//diagonal da direita para a esquerda feita
-						//VERIFICAÇÃO DE VITÓRIA DO COMPUTADOR CONCLUÍDO		
+						//VERIFICAÃ‡ÃƒO DE VITÃ“RIA DO COMPUTADOR CONCLUÃDO		
 																														
-	//Verificar se o computador pode perder e evitar que isso aconteça	
+	//Verificar se o computador pode perder e evitar que isso aconteÃ§a	
 																		
 	if((matriz[0][0]=='x') && (matriz[0][1]=='x') && (matriz[0][2]==' ')){
 		matriz[0][2]='o';
@@ -283,9 +285,9 @@ do{
 							matriz[0][2]='o';
 						}else{
 						//diagonal da direita para a esquerda feita
-						//VERIFICAÇÃO DE DERROTA DO COMPUTADOR CONCLUÍDO
+						//VERIFICAÃ‡ÃƒO DE DERROTA DO COMPUTADOR CONCLUÃDO
 
-// Verificação após a primeira jogada do usuário
+// VerificaÃ§Ã£o apÃ³s a primeira jogada do usuÃ¡rio
 
 	if((matriz[0][0]=='x') && (matriz[0][1]==' ') && (matriz[1][0]==' ') && (matriz[1][1]==' ')){
 		matriz[1][1]='o';
@@ -317,9 +319,9 @@ do{
 										matriz[1][1]='o';
 									}else{
 								//terceira linha feita
-								//VERIFICAÇÃO DA PRIMEIRA JOGADA FEITA
+								//VERIFICAÃ‡ÃƒO DA PRIMEIRA JOGADA FEITA
 	
-	//Segunda jogada do usuário
+	//Segunda jogada do usuÃ¡rio
 	if((matriz[1][1]=='x') && (matriz[2][2]=='x') && (matriz[0][0]=='o') && (matriz[0][2]==' ')){
 		matriz[0][2]='o';
 	}else{
@@ -477,11 +479,11 @@ do{
 		}
 	}
 	if(y==1){
-		printf("\n\nVocê Perdeu o Jogo!\n");
+		printf("\n\nVocÃª Perdeu o Jogo!\n");
 	}else{
 		printf("\n\nO Jogo deu Velha!\n");
 	}
-	printf("Quer jogar Mais? Sim(1) Não(0)\nSe digitar outro número será fechado: ");
+	printf("Quer jogar Mais? Sim(1) NÃ£o(0)\nSe digitar outro nÃºmero serÃ¡ fechado: ");
 	scanf("%d",&replay);
 	if(replay!=1){
 		system("cls");
